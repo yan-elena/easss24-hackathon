@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class NewsSource extends Artifact {
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @OPERATION
     void getTopic(OpFeedbackParam<String> topic) {
