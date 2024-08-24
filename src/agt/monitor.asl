@@ -1,16 +1,25 @@
-!start.
+!monitor.
 
-//todo: get result agent
-+!start : true
++!monitor
     <-
 
-   .wait(2000);
-    .print("monitor agent get result: ");
+   .wait(6000);
+    .print("monitor agent, get argument strength of topic 1: ");
 
-    //todo
-    //getRequest("http://rorybucd.pythonanywhere.com/get_graph/", "", Code, Content);
-    //.print("Code: ", Code, " Content: ", Content);
+    !showArgumentStrength(0);
+    !showArgumentStrength(1);
+
+    .wait(6000);
+    !monitor;
     .
+
++!showArgumentStrength(T)
+    <-
+    .concat("http://rorybucd.pythonanywhere.com/argument_strength/", T, URI);
+    getRequest(URI, "", Code, Content);
+    .println("argument strength for topic ",T, ":");
+    .println(Content).
+
 
 
 { include("$jacamo/templates/common-cartago.asl") }
