@@ -1,12 +1,12 @@
 import cartago.Artifact;
 import cartago.OPERATION;
 import cartago.OpFeedbackParam;
-import mams.web.HttpClient;
-import mams.web.HttpRequest;
-import mams.web.HttpResponse;
-import mams.web.RequestObject;
-import mams.web.WebResponse;
-import mams.web.WebUtils;
+import web.HttpClient;
+import web.HttpRequest;
+import web.HttpResponse;
+import web.RequestObject;
+import web.WebResponse;
+import web.WebUtils;
 
 public class RESTArtifact extends Artifact {
     @OPERATION
