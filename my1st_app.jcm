@@ -14,12 +14,17 @@
 
 mas my1st_app {
 
-    agent alice: agent.asl {
+    agent monitor: monitor.asl {
       focus: w.rest
+    }
+
+    agent alice: agent.asl {
+      focus: w.news
     }
 
     workspace w {
       artifact rest: artifact.RESTArtifact
+      artifact news: artifact.NewsSource
     }
 
     
