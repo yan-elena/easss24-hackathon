@@ -15,11 +15,11 @@
 mas my1st_app {
 
     agent alice: agent.asl {
-      focus: w.c1 
+      focus: w.rest
     }
 
     workspace w {
-      artifact c1: example.Counter(3) 
+      artifact rest: artifact.RESTArtifact
     }
 
     

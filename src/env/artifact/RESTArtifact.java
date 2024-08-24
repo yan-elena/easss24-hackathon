@@ -1,3 +1,5 @@
+package artifact;
+
 import cartago.Artifact;
 import cartago.OPERATION;
 import cartago.OpFeedbackParam;

@@ -36,6 +36,8 @@ repositories {
 
 dependencies {
     implementation('org.jacamo:jacamo:1.2')
+    implementation("io.netty:netty-codec-http:4.2.0.Alpha2")
+    implementation("com.fasterxml.jackson.core:jackson-core:2.17.2")
 }
 
 sourceSets {
