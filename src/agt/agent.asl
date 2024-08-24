@@ -2,18 +2,14 @@
 
 +!start : true
     <-
-
-    .wait(1000);
-    .print("alice agent started");
-
     .random(X);
-    .wait(X*1000);
+    .wait(X*2000);
     getTopic(ID);
-    .print("topic: ", ID);
 
     //generate the argument about the topic, represented as a random array of 5 elements
     !argument(ID, []);
 
+    !start;
     .
 
 +!argument(ID, L) : .length(L, N) & N<5
@@ -34,7 +30,7 @@
 <-  .my_name(N);
     .concat("http://rorybucd.pythonanywhere.com/argument/", ID, "/", N, URI);
     .concat("{\"argument_content\": ", L, "}",  C);
-    .print("URI: ", URI, " Content: ", C);
+    .print("topic: ", ID, " URI: ", URI, " Content: ", C);
     postRequest(URI, C, "application/json", Code, Content);
     .print("Code: ", Code, " Content: ", Content);
     .
